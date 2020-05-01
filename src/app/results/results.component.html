@@ -24,7 +24,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let trip of trips | paginate: { itemsPerPage: 5, currentPage: current };let i=index;" class="cursor-pointer p-5" routerLink="/trip/details/{{trip.id}}" routerLinkActive="active-item">
+  <tr *ngFor="let trip of trips | paginate: { itemsPerPage: 6, currentPage: current };let i=index;" class="cursor-pointer p-5" routerLink="/trip/details/{{trip.id}}" routerLinkActive="active-item">
     <th scope="row">{{ i + 1}}</th>
     <td>
       {{ trip.pickup_date | date }} <br>
