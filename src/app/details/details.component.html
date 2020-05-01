@@ -1,0 +1,91 @@
+<ng-container *ngIf="trip">
+    <div class="row">
+        <div class="float-left mt-4 ml-2 pl-5">
+            <button type="button" class="btn btn-outline-dark" routerLink="/">
+                <span class="fa fa-arrow-circle-left"></span> Back to search
+            </button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center f-40">
+        <p class="text-center">Trip details</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="card border-right-0 border-left-0">
+                <div class="card-header">
+                    <div class="float-left">
+                        {{ trip.pickup_date | date }} <br> {{ trip.pickup_date | date:'shortTime' }}
+                    </div>
+                    <div class="float-right">
+                        <b>{{trip.cost_unit}}. {{trip.cost}}</b>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="float-left">
+                        <p class="pb-4"><span class="fa fa-circle text-success"></span> {{trip.pickup_location}}</p>
+                        <p><span class="fa fa-circle text-danger"></span> {{trip.dropoff_location}}</p>
+                    </div>
+                    <div class="float-right">
+                        <p class="pb-4">{{trip.pickup_date | date:'shortTime'}}</p>
+                        <p>{{trip.dropoff_date | date:'shortTime'}}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-sm-3 text-center pt-4">
+                            <p class="fa fa-car text-dark f-40"></p>
+                            <p>{{trip.car_make}} {{trip.car_model}}</p>
+                        </div>
+                        <div class="col-sm-3 pt-4">
+                            <p>Distance</p>
+                            <p>Duration</p>
+                            <p>Sub Total</p>
+                        </div>
+                        <div class="col-sm-3 pt-4">
+                            <p>{{trip.distance}} {{trip.distance_unit}}</p>
+                            <p>{{trip.duration}} {{trip.duration_unit}}</p>
+                            <p>{{trip.cost_unit}} {{trip.cost}}</p>
+                        </div>
+                        <div class="col-sm-3 text-center">
+                            <p>{{trip.driver_name}}</p>
+                            <img src="{{trip.driver_pic}}" alt="" style="width:75px">
+                            <p>
+                                <ngb-rating [(rate)]="trip.driver_rating" class="text-success" [readonly]="true"
+                                    [max]="5"></ngb-rating>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="d-flex justify-content-center" id='map'>
+                
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row pt-2 mb-5">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <agm-map [latitude]="trip.pickup_lat" [longitude]="trip.pickup_lng" [fitBounds]="true">
+                <agm-marker [latitude]="trip.pickup_lat" [longitude]="trip.pickup_lng" [agmFitBounds]="true">
+                    <agm-info-window>
+                        <p>{{ trip.pickup_location }}</p>
+                    </agm-info-window>
+                </agm-marker>
+                <agm-marker [latitude]="trip.dropoff_lat" [longitude]="trip.dropoff_lng" [agmFitBounds]="true">
+                    <agm-info-window>
+                        <p><b>{{ trip.dropoff_location }}</b></p>
+                    </agm-info-window>
+                </agm-marker>
+            </agm-map>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</ng-container>

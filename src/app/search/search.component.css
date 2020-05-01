@@ -1,0 +1,39 @@
+.main{
+    background-image: url(https://c1.wallpaperflare.com/preview/459/107/708/gravel-road-tire-track.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+input[type="text"] {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    font-size: 40px;
+
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.m-t-20{
+    margin-top: 20%;
+}
+
+.f-30{
+    font-size: 30px;
+}
+
+select {
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    font-size: 20px;
+
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+
+
