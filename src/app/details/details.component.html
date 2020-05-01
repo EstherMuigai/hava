@@ -37,15 +37,10 @@
                             <p class="fa fa-car text-dark f-40"></p>
                             <p>{{trip.car_make}} {{trip.car_model}}</p>
                         </div>
-                        <div class="col-sm-3 pt-4">
-                            <p>Distance</p>
-                            <p>Duration</p>
-                            <p>Sub Total</p>
-                        </div>
-                        <div class="col-sm-3 pt-4">
-                            <p>{{trip.distance}} {{trip.distance_unit}}</p>
-                            <p>{{trip.duration}} {{trip.duration_unit}}</p>
-                            <p>{{trip.cost_unit}} {{trip.cost}}</p>
+                        <div class="col-sm-6 pt-2 text-center">
+                            <p><b>Distance</b> {{trip.distance}} {{trip.distance_unit}}</p>
+                            <p><b>Duration </b> {{trip.duration}} {{trip.duration_unit}}</p>
+                            <p><b>Sub Total</b>  {{trip.cost_unit}} {{trip.cost}}</p>
                         </div>
                         <div class="col-sm-3 text-center">
                             <p>{{trip.driver_name}}</p>
@@ -57,15 +52,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-sm-3"></div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-6">
-            <div class="d-flex justify-content-center" id='map'>
-                
             </div>
         </div>
         <div class="col-sm-3"></div>

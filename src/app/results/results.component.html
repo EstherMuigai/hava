@@ -32,7 +32,7 @@
     </td>
     <td>{{ trip.pickup_location }}</td>
     <td>{{ trip.dropoff_location }}</td>
-    <td>{{ trip.cost }}</td>
+    <td>{{ trip.cost_unit}} {{ trip.cost }}</td>
     <td class="text-primary">
       <ngb-rating [(rate)]="trip.driver_rating" [readonly]="true" [max]="5"></ngb-rating>
     </td>
