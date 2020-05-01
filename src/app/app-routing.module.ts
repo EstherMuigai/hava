@@ -6,7 +6,12 @@ import { DetailsComponent } from "./details/details.component";
 
 const routes: Routes = [
   {
-    path: '',
+    path:"",
+    redirectTo:"/search",
+    pathMatch:"full"
+  },
+  {
+    path: 'search',
     component: SearchComponent
   },
   {
