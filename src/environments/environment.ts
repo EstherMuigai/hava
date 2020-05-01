@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  baseUrl: window.location.origin,
+  havaUrl: 'https://hr.hava.bz/trips/recent.json',
 };
 
 /*

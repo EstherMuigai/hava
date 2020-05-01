@@ -1,0 +1,29 @@
+@import '~bs-stepper/dist/css/bs-stepper.min.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    font-family: 'Manrope', sans-serif;
+}
+
+.bg-navy{
+    background-color: rgb(23, 69, 117);
+}
+
+.bg-gray{
+    background-color: rgb(35, 44, 54);
+}
+
+.f-20{
+    font-size: 20px;
+}
+
+.f-40{
+    font-size: 40px;
+}
+
+#footer {
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

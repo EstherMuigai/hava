@@ -49,7 +49,7 @@ tripForm = this.forms.group({
         time:this.tripForm.value.time,
         distance:this.tripForm.value.distance
       };
-      this.router.navigate([`trip/search/results/${this.tripForm.value.trip}/${this.tripForm.value.distance}/${this.tripForm.value.time}`])
+      this.router.navigate([`/trip/search/results/${this.tripForm.value.trip}/${this.tripForm.value.distance}/${this.tripForm.value.time}`])
     }
   }
 
