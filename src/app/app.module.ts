@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { ResultsComponent } from './results/results.component';
 import { DetailsComponent } from './details/details.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { environment } from '../environments/environment'
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAvMLyMrxtmTVjFF-7Bb9Rm5nIQzZ8PIL4'
+      apiKey: environment.apiKey
     }),
     AppRoutingModule,
     HttpClientModule,
