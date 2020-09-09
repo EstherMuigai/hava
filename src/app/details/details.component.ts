@@ -16,6 +16,10 @@ export class DetailsComponent implements OnInit {
     private route:ActivatedRoute,
   ) { }
 
+   /**
+   * @description This page describes the details of a trip when selected
+   */
+
   ngOnInit(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.api.getTrips().subscribe((res: any) => {

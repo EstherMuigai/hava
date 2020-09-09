@@ -23,6 +23,13 @@ tripForm = this.forms.group({
     private api:ApiService,
   ) { }
 
+   /**
+   * @description This page captures the following parameters to be used to filter trips:
+   * @param {string} keyword
+   * @param {number} distance
+   * @param {number} time
+   */
+
   ngOnInit(): void {
     if(this.api.searchValues){
       this.tripForm.get('trip').setValue(this.api.searchValues.trip);
@@ -53,7 +60,7 @@ tripForm = this.forms.group({
     }
   }
 
-  addSize(){
+  increaseFontSize(){
     document.getElementById('trip').style.fontSize="50px"
   }
 

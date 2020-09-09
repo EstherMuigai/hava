@@ -136,5 +136,8 @@
     "@schematics/angular:component": {
       "styleext": "css"
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
